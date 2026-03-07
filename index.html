@@ -1,240 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Card: A Filipino LGBTQ+ Worker’s Quiet Strength Abroad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Progress Bar Styling */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background: #7a8ba1; /* Blue-gray color from your pitch */
+            width: 0%;
+            z-index: 1000;
+        }
 
-<title>The Last Card: A Filipino LGBTQ+ Worker’s Quiet Strength Abroad</title>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #f4f1ea; /* Beige background from your pitch */
+            margin: 0;
+            padding: 0;
+            color: #4a4a4a;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+        /* Hero Header Styling */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("venn-photo.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
 
-<style>
-    body {
-        font-family: 'Open Sans', sans-serif;
-        background: #f4f1ea; /* Pitch-inspired beige */
-        margin: 0;
-        padding: 0;
-        color: #4a4a4a; /* Muted dark gray */
-    }
+        .hero-text {
+            background: rgba(0,0,0,0.2);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
 
-    .container {
-        max-width: 850px;
-        margin: 40px auto; 
-        background: white;
-        padding: 60px; 
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-        border-radius: 8px;
-    }
+        .hero h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
 
-    /* Main Title Styling */
-    h1 {
-        font-family: 'Merriweather', serif;
-        font-size: 42px;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 5px;
-        line-height: 1.2;
-        color: #7a8ba1; /* Pitch-inspired blue-gray */
-    }
+        .subtitle {
+            font-size: 20px;
+            font-weight: 300;
+        }
 
-    /* Byline Styling */
-    .byline {
-        text-align: center;
-        color: #999;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 14px;
-        margin-bottom: 40px;
-    }
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
 
-    /* Section Headings Styling */
-    h2 {
-        font-family: 'Merriweather', serif;
-        font-size: 28px;
-        color: #7a8ba1; 
-        margin-top: 50px;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #efefef;
-        padding-bottom: 10px;
-    }
+        .byline {
+            text-align: center;
+            color: #999;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
 
-    /* Standard Paragraph Styling */
-    p {
-        line-height: 1.8;
-        font-size: 18px;
-        margin-bottom: 25px;
-    }
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            color: #7a8ba1; 
+            margin-top: 50px;
+            border-bottom: 2px solid #efefef;
+            padding-bottom: 10px;
+        }
 
-    /* Visual Media Styling */
-    img, video {
-        width: 100%;
-        height: auto;
-        border-radius: 6px;
-        margin-top: 20px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+        p { line-height: 1.8; font-size: 18px; margin-bottom: 25px; }
 
-    /* Visual Caption Styling */
-    .caption {
-        font-size: 15px;
-        color: #888;
-        font-style: italic;
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 30px;
-    }
+        /* Figure and Image Styling */
+        figure {
+            margin: 40px auto;
+            max-width: 750px;
+        }
 
-    /* Blockquote Styling (For Venn’s Voice) */
-    .quote {
-        font-family: 'Merriweather', serif;
-        font-size: 20px;
-        font-style: italic;
-        font-weight: 400;
-        border-left: 5px solid #cbd5e0; /* Gray accent */
-        padding-left: 25px;
-        margin: 40px 0;
-        color: #545b64;
-        line-height: 1.7;
-    }
+        img, video {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
-    /* Interview Source Section Styling */
-    .source-section {
-        margin-top: 50px;
-        padding: 25px;
-        background: #fafafa;
-        border-radius: 5px;
-        border: 1px solid #efefef;
-    }
-    
-    .source-header {
-        font-family: 'Merriweather', serif;
-        font-size: 20px;
-        margin-bottom: 10px;
-        color: #7a8ba1;
-    }
+        figcaption {
+            font-size: 15px;
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            margin-top: 12px;
+        }
 
-    /* Footer Styling */
-    .footer {
-        margin-top: 50px;
-        font-size: 15px;
-        color: #a0aec0;
-        border-top: 1px solid #efefef;
-        padding-top: 25px;
-        text-align: center;
-        line-height: 1.6;
-    }
-    
-    a {
-        color: #7a8ba1;
-        text-decoration: none;
-        border-bottom: 1px solid #7a8ba1;
-    }
+        .quote {
+            font-family: 'Merriweather', serif;
+            font-size: 24px;
+            font-style: italic;
+            border-left: 5px solid #cbd5e0;
+            padding-left: 30px;
+            margin: 45px 0;
+            color: #545b64;
+        }
 
-</style>
+        .source-section { margin-top: 60px; padding: 30px; background: #fafafa; border-radius: 8px; border: 1px solid #efefef; }
+        .footer { margin-top: 60px; font-size: 15px; color: #a0aec0; border-top: 1px solid #efefef; padding-top: 30px; text-align: center; }
+    </style>
 </head>
-
 <body>
 
+<div id="progress-bar"></div>
+
+<header class="hero">
+  <div class="hero-text">
+    <h1>The Last Card</h1>
+    <p class="subtitle">A Filipino LGBTQ+ Worker’s Quiet Strength Abroad</p>
+  </div>
+</header>
+
 <div class="container">
-
-    <h1>The Last Card: A Filipino LGBTQ+ Worker’s Quiet Strength Abroad</h1>
-    <p class="byline">By: Chandyll Park</p>
-
-    <img src="venn-photo.jpg" alt="Venn looking out a window thoughtfully.">
-    <p class="caption">Venn, a Filipino migrant worker in South Korea balancing work, study, and family responsibility.</p>
+    <p class="byline">By Chandyll Park</p>
 
     <h2>A Quiet Night After Work</h2>
+    <p>The biting wind of a South Korean winter waits outside, but inside Venn's cramped room, a different kind of endurance begins. After a ten-hour shift, he logs into his online university class. The transition is immediate: from manual labor to mental focus, driven by a deep sense of purpose.</p>
 
-    <p>
-        The winter air in South Korea cuts sharply after a long factory shift ends. Venn steps into his small, silent room and meticulously removes his heavy winter jacket, the physical toll of manual labor settling into his shoulders. He does not rest immediately. A message from his family in the Philippines blinks on his smartphone screen, illuminating the dim space with a quiet reminder of home. He glances at it briefly, exhales softly, and opens his laptop.
-    </p>
-
-    <p>
-        It is well past midnight, but the day is far from over. He logs into his online university class, making a seamless but grueling transition from intense physical exertion to demanding academic focus. This dual burden is exhausting, yet entirely necessary for the future he is trying to build.
-    </p>
-
-    <div class="quote">
-        “After long shifts, it can be very difficult to attend university classes, especially when I’m already physically and mentally exhausted. What keeps me going is the reminder of why I started. I know that education is one of the ways I can build a better future for myself and my family. I also remind myself that the sacrifices I’m making now are temporary, but the opportunities they can create in the future are long-term. That thought gives me the motivation to keep going even on the hardest days.”
-    </div>
-
-    <img src="venn-study.png" alt="Close-up of a laptop screen.">
-    <p class="caption">After long factory shifts, Venn continues attending his university classes late at night.</p>
+    <figure>
+      <img src="venn-study.png" alt="Venn sitting at his laptop screen late at night.">
+      <figcaption>After long factory shifts, Venn continues his university classes late at night.</figcaption>
+    </figure>
 
     <h2>Being the “Last Card”</h2>
+    <p>To his family, Venn is the “last card”—the final, reliable person they depend on when things become difficult.</p>
+    <div class="quote">“Being the ‘last card’ in my family means I feel a deep responsibility to succeed, not only for myself but also for them.”</div>
 
-    <p>
-        To his family back in the Philippines, Venn’s presence abroad represents far more than just economic contribution. His life fundamentally challenges traditional, rigid definitions of masculinity and strength. He is a factory hand, a university student, an athlete, and above all, a breadwinner. He carries overlapping responsibilities that demand resilience in both visible and invisible ways. He describes himself as their “last card”—the final option they rely on to keep their future secure when all other avenues have been exhausted.
-    </p>
-
-    <div class="quote">
-        “Being the ‘last card’ in my family means that I feel a deep responsibility to succeed, not only for myself but also for them. I see myself as someone who can help improve our situation and continue the sacrifices my family has made. Because of that, I try to be careful with the decisions I make every day. I always ask myself if what I’m doing will bring me closer to a better future for me and my family. It pushes me to stay focused, work hard, and avoid choices that might waste the opportunities I have.”
-    </div>
-
-    <img src="venn-phone.png" alt="A remittance confirmation screen.">
-    <p class="caption">Like many Filipino migrant workers, Venn regularly sends remittances home.</p>
+    <figure>
+      <img src="venn-phone.png" alt="A smartphone showing a banking transaction confirmation.">
+      <figcaption>Venn regularly sends remittances home to the Philippines.</figcaption>
+    </figure>
 
     <h2>Working in a Male-Dominated Space</h2>
+    <p>Most of Venn’s days are spent in a factory floor defined by rigid expectations of masculinity. As a gay Filipino worker, he navigates this by letting his professional competence speak for itself.</p>
+    <div class="quote">“In my workplace, men are often expected to be tough, quiet about their emotions, and always strong.”</div>
 
-    <p>
-        Most of Venn’s days are consumed by the repetitive rhythm of a factory floor—an environment often defined by socially conservative attitudes and strict, unspoken expectations of masculinity. As a gay Filipino man working in this space, he is acutely aware of the subtle pressures dictating how he should carry himself, how he should speak, and how much of his true identity he can safely reveal. Yet, instead of confronting these narrow assumptions with visible rebellion, he builds a quiet foundation of respect through unshakeable consistency and skill.
-    </p>
-
-    <div class="quote">
-        “In my workplace, which is mostly male-dominated, there is often an expectation that men should be tough, quiet about their emotions, and always strong. Sometimes there is also pressure to act in ways that fit traditional ideas of masculinity. As a gay Filipino worker, I navigate that by simply focusing on doing my job well and treating everyone with respect. I believe that professionalism and hard work speak louder than stereotypes. Over time, people start to see me for my work ethic and character rather than my identity.”
-    </div>
-
-    <img src="factory.jpg" alt="Interior of a manufacturing plant, focused on industrial machinery and workers in safety gear.">
-    <p class="caption">Venn works long shifts in a male-dominated factory environment.</p>
+    <figure>
+      <img src="factory.jpg" alt="Industrial machinery inside a South Korean manufacturing plant.">
+      <figcaption>Venn works long shifts in a male-dominated environment.</figcaption>
+    </figure>
 
     <h2>Life Beyond the Factory</h2>
-
-    <video controls poster="volleyball-thumbnail.jpg">
-        <source src="volleyball.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <p class="caption">Venn playing competitive volleyball.</p>
-
-    <p>
-        Outside the constraints of the factory floor and the quiet solitude of his late-night studies, Venn finds a profoundly different space for expression: the volleyball court. Here, as a competitive athlete, his strength is highly visible and undeniable. He moves with discipline and control, completely unsettling narrow assumptions about both LGBTQ+ identity and migrant labor. On the court, his presence makes it clear that masculinity does not need to be exclusively heterosexual to be recognized as valid and powerful.
-    </p>
-
-    <div class="quote">
-        “As a competitive volleyball player, masculinity on the court is often associated with strength, aggression, and competitiveness. For me, playing volleyball is a space where I can fully express my dedication and passion for the sport. I think when people see my performance, it sometimes challenges their assumptions about what a gay athlete is supposed to be like. At the end of the day, when you perform well and contribute to the team, people respect you for your skill and commitment.”
-    </div>
+    <figure>
+      <video controls poster="volleyball-thumbnail.jpg"><source src="volleyball.mp4" type="video/mp4"></video>
+      <figcaption>Venn finds expression and respect through competitive volleyball.</figcaption>
+    </figure>
+    
+    <div class="quote">“When you perform well and contribute to the team, people respect you for your skill and commitment.”</div>
 
     <h2>Quiet Strength</h2>
+    <p>Venn shows us that true resilience is often steady, responsible, and quietly persistent—a powerful form of resistance from a 'last card' defying all odds.</p>
+    <div class="quote">“For me, strength is not always loud or visible. Sometimes strength is simply continuing to move forward even when things are difficult.”</div>
 
-    <p>
-        Ultimately, when the applause fades and the grueling shift ends, Venn returns to the small room where his relentless routine began. He sits alone, opens his phone, and initiates a transfer of funds back to the Philippines. In this profound, quiet space, strength is not loud or triumphant. It is the steady, conscious decision to carry responsibility again tomorrow. His life resists simple stereotypes of weakness or rebellion; instead, it frames self-discipline and emotional control as the most legitimate expressions of courage.
-    </p>
-
-    <div class="quote">
-        “For me, strength is not always loud or visible. Sometimes strength is simply continuing to move forward even when things are difficult. It is about resilience, patience, and the ability to keep working toward your goals even when you feel tired or discouraged. Since working abroad, my understanding of strength has changed. I realized that true strength is also about humility, adapting to new environments, and carrying responsibilities while still believing in yourself.”
-    </div>
-
-    <img src="venn-reflect.jpg" alt="A silhouette profile of a person looking out a window at a South Korean city skyline at dawn.">
-    <p class="caption">Despite the challenges of working abroad, Venn continues building a future for himself and his family.</p>
+    <figure>
+      <img src="venn-reflect.jpg" alt="A silhouette of Venn looking at the sunrise over a city skyline.">
+      <figcaption>Moments of quiet reflection remind Venn why he continues to persevere despite the challenges.</figcaption>
+    </figure>
 
     <div class="source-section">
-        <p class="source-header">Interview Source & Ethical Consent</p>
-        <p>
-            This feature story is based on a structured personal interview conducted verbatim with Venn in February 2026. Venn provided full, informed consent for the use of his actual name, exact quotes, and personal story in this academic project.
-        </p>
-        <p>
-            Full Interview Recording/Transcript: <a href="YOUR_LINK_HERE">Click here</a>
-        </p>
+        <p><strong>Interview Source & Ethical Consent</strong></p>
+        <p>This feature story is based on an interview with Venn conducted in February 2026. Venn provided full permission and informed consent for the use of his actual name and story.</p>
     </div>
 
     <div class="footer">
         <strong>Credits</strong><br>
-        Story, curation, and web design by: Chandyll Park (Section: A3109)<br>
-        Interviewee: Venn<br>
-        Course: Gender and Society (MO-SS086)<br>
+        Story and Design by: **Chandyll Park** (Section: **A3109**)<br>
+        Interviewee: Venn | Course: Gender and Society (MO-SS086)<br>
         Mapúa Malayan Digital College
     </div>
-
 </div>
+
+<script>
+window.onscroll = function() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrolled = (winScroll / height) * 100;
+  document.getElementById("progress-bar").style.width = scrolled + "%";
+};
+</script>
 
 </body>
 </html>
