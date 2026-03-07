@@ -6,64 +6,68 @@
     <title>The Last Card: A Filipino LGBTQ+ Worker’s Quiet Strength Abroad</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Progress Bar for Advanced Coherence */
+        /* Progress Bar - Advanced Coherence */
         #progress-bar {
             position: fixed;
             top: 0;
             left: 0;
             height: 5px;
-            background: #7a8ba1; /* Blue-gray from your pitch */
+            background: #7a8ba1; /* Blue-gray from pitch */
             width: 0%;
             z-index: 1000;
         }
 
         body {
             font-family: 'Open Sans', sans-serif;
-            background: #f4f1ea; /* Beige background from your pitch */
+            background: #f4f1ea; /* Beige background from pitch */
             margin: 0;
             padding: 0;
             color: #4a4a4a;
         }
 
-        /* Hero Header for Advanced Style */
+        /* Responsive Hero Header - Fixed the "Half Photo" issue */
         .hero {
             background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("venn-photo.jpg");
             background-size: cover;
-            background-position: center;
-            height: 500px;
+            background-position: center top; /* Keeps the subject's head visible */
+            min-height: 70vh; /* Adjusts height based on screen size */
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            margin-bottom: 40px;
+            padding: 20px;
         }
 
         .hero-text {
-            background: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.3);
             padding: 30px;
             border-radius: 10px;
             backdrop-filter: blur(5px);
+            max-width: 90%;
         }
 
         .hero h1 {
             font-family: 'Merriweather', serif;
-            font-size: 48px;
+            font-size: clamp(32px, 5vw, 56px); /* Responsive font size */
             margin-bottom: 10px;
         }
 
         .subtitle {
-            font-size: 20px;
+            font-size: clamp(16px, 2vw, 22px);
             font-weight: 300;
         }
 
         .container {
             max-width: 850px;
-            margin: auto;
+            width: 90%;
+            margin: -50px auto 40px; /* Slight overlap for modern look */
             background: white;
-            padding: 60px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: clamp(20px, 5vw, 60px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             border-radius: 8px;
+            position: relative;
+            z-index: 2;
         }
 
         .byline {
@@ -77,8 +81,8 @@
 
         h2 {
             font-family: 'Merriweather', serif;
-            font-size: 28px;
-            color: #7a8ba1; /* Muted blue-gray from your pitch */
+            font-size: clamp(24px, 3vw, 32px);
+            color: #7a8ba1; 
             margin-top: 50px;
             border-bottom: 2px solid #efefef;
             padding-bottom: 10px;
@@ -86,16 +90,18 @@
 
         p { line-height: 1.8; font-size: 18px; margin-bottom: 25px; }
 
-        /* Figure and Image Styling for Advanced Organization */
+        /* Responsive Figure and Image Styling */
         figure {
-            margin: 40px auto;
-            max-width: 750px;
+            margin: 40px 0;
+            width: 100%;
         }
 
         img, video {
             width: 100%;
+            height: auto; /* Ensures photo is never "half" or squished */
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: block;
         }
 
         figcaption {
@@ -104,22 +110,29 @@
             font-style: italic;
             text-align: center;
             margin-top: 12px;
+            padding: 0 10px;
         }
 
         .quote {
             font-family: 'Merriweather', serif;
-            font-size: 22px;
+            font-size: clamp(18px, 2.5vw, 24px);
             font-style: italic;
             border-left: 5px solid #cbd5e0;
-            padding-left: 30px;
+            padding-left: clamp(15px, 3vw, 30px);
             margin: 45px 0;
             color: #545b64;
+            line-height: 1.6;
         }
 
         .source-section { margin-top: 60px; padding: 30px; background: #fafafa; border-radius: 8px; border: 1px solid #efefef; }
         .footer { margin-top: 60px; font-size: 15px; color: #a0aec0; border-top: 1px solid #efefef; padding-top: 30px; text-align: center; }
         
         a { color: #7a8ba1; text-decoration: none; border-bottom: 1px solid #7a8ba1; }
+
+        @media (max-width: 600px) {
+            .container { margin-top: 20px; padding: 25px; }
+            .hero { min-height: 50vh; }
+        }
     </style>
 </head>
 <body>
@@ -134,7 +147,7 @@
 </header>
 
 <div class="container">
-    <p class="byline">By Chandyll Park</p>
+    <p class="byline">BY CHANDYLL PARK</p>
 
     <h2>A Quiet Night After Work</h2>
     <p>The winter air in South Korea cuts sharply after a long factory shift ends. Venn steps into his small, silent room and meticulously removes his heavy winter jacket, the physical toll of manual labor settling into his shoulders. He does not rest immediately. A message from his family in the Philippines blinks on his smartphone screen, illuminating the dim space with a quiet reminder of home. He glances at it briefly, exhales softly, and opens his laptop.</p>
@@ -158,7 +171,7 @@
     </div>
 
     <figure>
-      <img src="venn-phone.png" alt="A screenshot of a mobile banking app with a transaction confirmation (Blurred context).">
+      <img src="venn-phone.png" alt="A screenshot of a mobile banking app with a transaction confirmation.">
       <figcaption>Like many Filipino migrant workers, Venn regularly sends remittances home.</figcaption>
     </figure>
 
@@ -170,7 +183,7 @@
     </div>
 
     <figure>
-      <img src="factory.jpg" alt="Stock visualization: Interior of a manufacturing plant, focused on industrial machinery and workers in safety gear.">
+      <img src="factory.jpg" alt="Interior of a manufacturing plant.">
       <figcaption>Venn works long shifts in a male-dominated factory environment.</figcaption>
     </figure>
 
@@ -194,20 +207,21 @@
     </div>
 
     <figure>
-      <img src="venn-reflect.jpg" alt="A silhouette of Venn looking at the sunrise over a city skyline.">
+      <img src="venn-reflect.jpg" alt="Venn looking at the sunrise over a city skyline.">
       <figcaption>Despite the challenges of working abroad, Venn continues building a future for himself and his family.</figcaption>
     </figure>
 
     <div class="source-section">
-        <p class="source-header">Interview Source & Ethical Consent</p>
+        <p><strong>Interview Source & Ethical Consent</strong></p>
         <p>This feature story is based on a structured personal interview conducted verbatim with Venn in February 2026. Venn provided full, informed consent for the use of his actual name, exact quotes, and personal story in this academic project.</p>
         <p>Full Interview Recording/Transcript: <a href="YOUR_LINK_HERE">Click here</a></p>
     </div>
 
     <div class="footer">
-        <strong>Credits</strong><br>
-        Story, curation, and web design by: **Chandyll Park** (Section: **A3109**)<br>
-        Interviewee: Venn | Course: Gender and Society (MO-SS086)<br>
+        Credits<br>
+        Story, curation, and web design by: Chandyll Park (Section: A3109)<br>
+        Interviewee: Venn<br>
+        Course: Gender and Society (MO-SS086)<br>
         Mapúa Malayan Digital College
     </div>
 </div>
